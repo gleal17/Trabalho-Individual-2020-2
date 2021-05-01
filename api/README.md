@@ -18,6 +18,16 @@ brew install postgresql
 brew services start postgresql
 ```
 
+### Manjaro
+```shell
+sudo pacman -S postgresql postgis
+sudo su postgres -l # or sudo -u postgres -i
+initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/'
+exit
+sudo systemctl enable --now postgresql.service
+psql --version
+```
+
 ## Criando o Banco de Dados
 
 Após a instalação o PostgreSQL realiza a criação de um usuário `postgres`, ele carrega por padrão todas as responsabilidades administrativas.
