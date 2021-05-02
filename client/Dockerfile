@@ -10,6 +10,6 @@ RUN yarn global add @quasar/cli
 
 RUN yarn install
 
-EXPOSE $8080
+EXPOSE 8080
 
-CMD [ "yarn", "dev", "quasar" ]
+CMD [ "dev", "quasar" ]
