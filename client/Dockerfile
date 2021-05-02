@@ -1,16 +1,15 @@
 FROM node:16
 
-RUN mkdir -p /app/client
-WORKDIR /app/client
+RUN mkdir -p /app
 
-COPY ./client/package.json .
-COPY ./client/yarn.lock .
+WORKDIR /app
 
-RUN yarn
-RUN yanr install
+COPY . .
 
-COPY ./client .
+RUN yarn global add @quasar/cli
 
-EXPOSE 8080
+RUN yarn install
 
-CMD [ "yarn", "run", "dev" ]
+EXPOSE $8080
+
+CMD [ "yarn", "dev", "quasar" ]

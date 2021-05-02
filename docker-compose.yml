@@ -1,0 +1,27 @@
+version: '3.9'
+
+services: 
+    db:
+        image: postgres
+        ports:
+            - "5432:5432"
+        env_file:
+            - db.env
+    api:
+        build: ./api
+        ports:
+            - "8000:8000"
+        volumes:
+            - ./api:/app
+        depends_on: 
+            - db
+        env_file: 
+            - db.env
+        network_mode: host
+    client:
+        build: ./client
+        ports: 
+            - "8080:8080"
+            - "8788:8788"
+        depends_on:
+            - api
