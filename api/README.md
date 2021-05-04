@@ -58,7 +58,7 @@ Enfim podemos sair da sessão atual do postgres utilizando:
 ## Executando o Projeto
  
 Criaremos um ambiente virtualizado para a execução do projeto `Django` utilizando o pacote `virtualenv`, dentro da pasta raíz do projeto deveremos executar os seguintes comandos.
-
+ 
 ```shell
 sudo pip3 install virtualenv
 virtualenv env
