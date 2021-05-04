@@ -79,7 +79,7 @@ Realize as migrações do banco com o comando:
 python3 manage.py migrate
 ```
 
-Para a execução do projeto devemos utilizar o seguinte comando:
+Para a execução do projeto devemos utilizar o seguinte comando: 
 
 ```shell
 python3 manage.py runserver 
