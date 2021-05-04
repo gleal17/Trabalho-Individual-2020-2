@@ -68,7 +68,7 @@ source env/bin/activate
 Agora estamos dentro de um ambiente isolado para a instalação dos pacotes necessários para o projeto.
 
 ```shell
-pip3 install django djangorestframework psycopg2 django-cors-headers 
+pip3 install django djangorestframework psycopg2 django-cors-headers
 ```
 
 Após a instalação dos pacotes devemos entrar na pasta onde se encontra o arquivo `manage.py`, a pasta raíz do projeto da API.

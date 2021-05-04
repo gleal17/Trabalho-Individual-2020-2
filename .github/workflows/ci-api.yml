@@ -23,7 +23,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Build api
       run: | 
-        docker-compose up -d api
+        docker-compose up --build -d api
     - name: Run Tests
       run: |
         docker-compose run api python manage.py test
