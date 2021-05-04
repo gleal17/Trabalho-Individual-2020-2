@@ -5,8 +5,10 @@ services:
         image: postgres
         ports:
             - "5432:5432"
-        env_file:
-            - .env
+        environment:
+            - POSTGRES_DB=myproject
+            - POSTGRES_USER=myuser
+            - POSTGRES_PASSWORD=password
     api:
         build: ./api
         command: bash -c "python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
@@ -22,6 +24,5 @@ services:
         build: ./client
         ports: 
             - "8080:8080"
-            - "8788:8788"
         depends_on:
             - api

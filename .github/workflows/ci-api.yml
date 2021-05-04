@@ -24,7 +24,7 @@ jobs:
           echo POSTGRES_HOST=${{ secrets.POSTGRES_HOST }} >> .env
           echo POSTGRES_PORT=${{ secrets.POSTGRES_PORT }} >> .env
       - name: Build api
-        run: docker-compose up --build -d
+        run: docker-compose up --build -d api
       - name: Run test
         run: docker-compose run api run manage.py test
 
