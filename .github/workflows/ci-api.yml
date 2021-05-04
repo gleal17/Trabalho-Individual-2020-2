@@ -18,7 +18,7 @@ jobs:
       - name: Build api
         run: docker-compose up --build -d api
       - name: Run test
-        run: docker-compose run api python manage.py test
+        run: docker-compose run api coverage run manage.py test
 
   deploy:
     needs: [ build ]

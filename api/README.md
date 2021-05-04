@@ -76,7 +76,7 @@ Após a instalação dos pacotes devemos entrar na pasta onde se encontra o arqu
 Realize as migrações do banco com o comando:
 
 ```shell
-python3 manage.py migrate
+python3 manage.py migrate 
 ```
 
 Para a execução do projeto devemos utilizar o seguinte comando:
