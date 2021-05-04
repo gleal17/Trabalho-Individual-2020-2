@@ -6,9 +6,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN yarn global add @quasar/cli
-
 RUN yarn install
+
+RUN yarn global add @quasar/cli
 
 EXPOSE 8080
 
