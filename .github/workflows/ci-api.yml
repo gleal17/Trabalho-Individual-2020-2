@@ -31,7 +31,21 @@ jobs:
     - name: Run Tests
       run: |
         docker-compose run api python manage.py test
-        
-        
-        
+
+  deploy:
+    needs: [ build_and_test,sonarcloud-analysis ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy docker container to heroku.
+        uses: gonuit/heroku-docker-deploy@v1.3.2
+        with:
+          email: guilhermelml@gmail.com
+          heroku_api_key: ${{ secrets.HEROKKU_API_KEY }}
+          heroku_app_name: gces-ti-apir
+          dockerfile_directory: ./api/
+          dockerfile_name: Dockerfile
+          docker_options: "--no-cache"
+          process_type: web
         

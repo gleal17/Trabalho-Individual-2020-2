@@ -24,7 +24,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         
-   deploy:
+  deploy:
     needs: [ build_and_test,sonarcloud-analysis ]
     runs-on: ubuntu-latest
     steps:
