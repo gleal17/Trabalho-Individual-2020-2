@@ -33,7 +33,7 @@ jobs:
         docker-compose run api python manage.py test
 
   deploy:
-    needs: [ build_and_test,sonarcloud-analysis ]
+    needs: [ sonarcloud ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
