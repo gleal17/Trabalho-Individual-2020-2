@@ -90,7 +90,7 @@ python3 manage.py runserver
 Para rodar os testes do projeto execute o comando:
 
 ```shell
-python manage.py test
+python manage.py test 
 ``` 
 
 ## Arquivos de Configuração
