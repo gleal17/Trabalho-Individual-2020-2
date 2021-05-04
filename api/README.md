@@ -82,7 +82,7 @@ python3 manage.py migrate
 Para a execução do projeto devemos utilizar o seguinte comando:
 
 ```shell
-python3 manage.py runserver
+python3 manage.py runserver 
 ```
 
 ## Rodando os Testes
