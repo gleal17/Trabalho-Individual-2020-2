@@ -16,8 +16,8 @@
     "serve:test:coverage": "quasar serve test/jest/coverage/lcov-report/ --port 8788",
     "concurrently:dev:jest": "concurrently \"quasar dev\" \"jest --watch\"",
     "build": "quasar build",
-    "start": "node server.js",
-    "heroku-postbuild": "yarn && yarn build"
+    "postinstall": "npm run build",
+    "start": "node server.js"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
