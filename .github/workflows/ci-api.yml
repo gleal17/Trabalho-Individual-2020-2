@@ -15,11 +15,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: postgress env
+        run: |
+          docker run\
+            --network="host"\
+            --env POSTGRES_HOST="localhost"\
+            --env POSTGRES_PORT="5432"\
+            --env POSTGRES_DB="myproject"\
+            --env POSTGRES_USER="myuser"\
+            --env POSTGRES_PASSWORD="password"\
       - name: Build api
         run: docker-compose up -d api
       - name: Run test
         run: docker-compose run api python manage.py test
-        
+
   sonarcloud:
     runs-on: ubuntu-latest
     steps:

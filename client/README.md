@@ -8,7 +8,7 @@
 ## Intalação  
 
 O projeto utiliza do framework Quasar, para instalar utilize o comando abaixo:
-
+ 
 ```sh
 yarn global add @quasar/cli
 ```
