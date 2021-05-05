@@ -14,13 +14,6 @@ jobs:
         run: docker-compose up -d client
       - name: Run tests
         run: docker-compose run client quasar test --unit jest
-      - name: Publish tests to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          files: ./client/coverage/coverage-final.json
-          flags: unittests
-          fail_ci_if_error: true
-          verbose: false
 
   sonarcloud:
     runs-on: ubuntu-latest
