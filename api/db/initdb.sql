@@ -1,0 +1,3 @@
+
+GRANT ALL PRIVILEGES ON DATABASE myproject TO myuser;
+ALTER USER myuser CREATEDB;
