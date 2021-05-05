@@ -19,6 +19,7 @@ jobs:
         run: docker-compose up -d api
       - name: Run test
         run: docker-compose run api python manage.py test
+
   sonarcloud:
     runs-on: ubuntu-latest
     steps:
