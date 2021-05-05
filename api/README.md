@@ -62,7 +62,7 @@ Criaremos um ambiente virtualizado para a execução do projeto `Django` utiliza
 ```shell
 sudo pip3 install virtualenv
 virtualenv env
-source env/bin/activate 
+source env/bin/activate
 ```
 
 Agora estamos dentro de um ambiente isolado para a instalação dos pacotes necessários para o projeto.
