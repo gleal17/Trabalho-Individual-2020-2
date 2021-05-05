@@ -3,7 +3,7 @@
 ## Pré-requisitos
 
 - NodeJS versão >= 10.0
-- yarn
+- yarn 
 
 ## Intalação 
 
