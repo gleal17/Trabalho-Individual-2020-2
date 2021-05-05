@@ -19,9 +19,20 @@ jobs:
         run: docker-compose up -d api
       - name: Run test
         run: docker-compose run api python manage.py test
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v1.4
+        with:
+          projectBaseDir: api
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
-    needs: [ build ]
+    needs: [ build, sonarcloud ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

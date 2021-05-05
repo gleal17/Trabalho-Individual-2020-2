@@ -14,9 +14,19 @@ jobs:
         run: docker-compose up -d client
       - name: Run tests
         run: docker-compose run client quasar test --unit jest
-
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v1.4
+        with:
+          projectBaseDir: client
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   deploy:
-    needs: [ build ]
+    needs: [ build, sonarcloud ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

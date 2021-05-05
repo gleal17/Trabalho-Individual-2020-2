@@ -1,3 +1,23 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gleal17_Trabalho-Individual-2020-2&metric=alert_status)](https://sonarcloud.io/dashboard?id=gleal17_Trabalho-Individual-2020-2)[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=gleal17_Trabalho-Individual-2020-2&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=gleal17_Trabalho-Individual-2020-2)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=gleal17_Trabalho-Individual-2020-2&metric=bugs)](https://sonarcloud.io/dashboard?id=gleal17_Trabalho-Individual-2020-2) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=gleal17_Trabalho-Individual-2020-2&metric=code_smells)](https://sonarcloud.io/dashboard?id=gleal17_Trabalho-Individual-2020-2)
+## Solução
+
+**Aluno**: Guilherme Leal
+
+**Matrícula**: 15/0128312
+
+ - Criados Dockerfiles e docker-compose
+ - Integração contínua com workflow
+ - SonarCloud para análises de código
+ - Deploy no Heroku
+
+**Execução do projeto**
+
+```
+sudo docker-compose up --build
+```
+
 # Trabalho Individual 2020.2
 
 
