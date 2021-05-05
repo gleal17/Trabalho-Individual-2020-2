@@ -19,6 +19,12 @@ jobs:
         run: docker-compose up -d api
       - name: Run test
         run: docker-compose run api python manage.py test
+      - name: Publish tests to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          files: ./api/coverage/coverage-final.json
+          fail_ci_if_error: true
+          verbose: false
   sonarcloud:
     runs-on: ubuntu-latest
     steps:
